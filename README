@@ -3,7 +3,13 @@ Example RMardown problem
 shinyAppDir does not recognize global.R using Rmarkdown to embed a shiny app
 
 What I did: Start RStudio. Open mytest.Rmd (in working directory).  Click "Run Document".
+
+Source: The shiny app is a copy of 01_hello example (with minor changes commented and global.R added). 
+http://shiny.rstudio.com/tutorial/lesson1/
+system.file("examples", package="shiny")
+runExample("01_hello") # a histogram 
+
 What I see: "ERROR: object 'mylabel' not found" ('mylabel' is defined in global.R and referenced in server.R)
 
-Note: runApp from console works fine (successfully references 'mylabel' from global.R)
+Note: runApp("my_01_hello") works fine from R console (successfully references 'mylabel' from global.R)
 
